@@ -13,7 +13,7 @@ def get_the_meaning(word):
 while True:
     word = str(input("Enter word: "))
     print(get_the_meaning(word),end='\n')
-    q = input(('enter q to quit\n')).strip()
+    q = input(('enter q to quit or any key to continue\n')).strip()
     if q.lower()=='q' or q.lower()=='quit':
         quit()
     print('------------------------------------------------------------------')
