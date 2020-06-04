@@ -6,7 +6,7 @@ def get_the_meaning(word):
     pattern = re.compile(r'"definition": ".+\."')
     meaning = re.findall(pattern,res)
     if len(meaning) == 0:
-        print('Word not found!')
+        return('Word not found!')
     else:
         return meaning[0]
 
