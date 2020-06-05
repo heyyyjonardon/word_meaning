@@ -2,9 +2,7 @@ from tkinter import *
 import requests
 import re
 
-
 meaning = []
-
 
 def get_the_meaning_on_return(event):
     word = word_entry.get()
