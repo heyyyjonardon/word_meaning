@@ -5,10 +5,11 @@ def get_the_meaning(word):
     res = requests.get('https://api.dictionaryapi.dev/api/v2/entries/en/{}'.format(word)).text
     pattern = re.compile(r'"definition": ".+\."')
     meaning = re.findall(pattern,res)
+    meaning = re.sub("definition","Meaning",meaning[0])
     if len(meaning) == 0:
         return('Word not found!')
     else:
-        return meaning[0]
+        return meaning
 
 while True:
     word = str(input("Enter word: "))
